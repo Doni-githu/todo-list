@@ -7,6 +7,7 @@ import { IContext, TodoAction, TodoStates } from '../../interfaces/types'
 import ChangeTodo from '../ChangeTodo/ChangeTodo'
 import './Todo.scss'
 import Box from '../../uiComponents/Box/Box'
+import { filterTodoHandler } from '../../utils'
 
 const Todo = () => {
     const { state, dispatch } = useContext(context) as IContext<TodoStates, TodoAction>
@@ -17,7 +18,7 @@ const Todo = () => {
                 <FilterTodo />
             </Box>
             <Box>
-                {state.todos.length === 0 ? <>
+                {filterTodoHandler(state.todos, state.filter).length === 0 ? <>
                     <h1 className='text-center text-danger'>Not have {state.filter !== "all" ? state.filter : ""} todos </h1>
                 </> : <List />}
             </Box>

@@ -20,10 +20,11 @@ const FilterTodo = () => {
       title: "completed"
     }
   ]
+  let len = state.todos.filter((c) => c.status === "active").length
   return (
     <div className='d-flex justify-content-between'>
       <div className='center'>
-        <p>{state.todos.filter((c) => c.status === "active").length}</p>
+        <p>{len} item{len > 1 ? "s" : ""} left</p>
       </div>
       <div className='btn-group'>
         {data.map((item) => (
