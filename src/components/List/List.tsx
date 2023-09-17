@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import Item from '../Item/Item'
 import { context } from '../../context'
-import { FilterType, IContext, ITodo, TodoAction, TodoStates, TodoType } from '../../interfaces/types'
+import { IContext, TodoAction, TodoStates, TodoType } from '../../interfaces/types'
 import { filterTodoHandler } from '../../utils'
 
 const List = () => {
@@ -9,7 +9,7 @@ const List = () => {
     const setStatus = (status: TodoType, id: string): void => {
         dispatch({ type: 'CHANGE_STATUS', payload: [status, id] })
     }
-    
+
     return (
         <div className='list-group'>
             {filterTodoHandler(state.todos, state.filter).map((item, idx) => {
