@@ -1,4 +1,3 @@
-import React from 'react'
 import './CheckBox.scss'
 import { ITodo } from '../../interfaces/types'
 export interface ICheckBoxProps {
