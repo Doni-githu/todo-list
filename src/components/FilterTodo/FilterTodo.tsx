@@ -28,7 +28,7 @@ const FilterTodo = () => {
       </div>
       <div className='btn-group'>
         {data.map((item) => (
-          <button onClick={() => changeFilter(item.title)} className={`btn ${item.title === state.filter ? "active" : ""}`}>{item.title.charAt(0).toUpperCase() + item.title.slice(1)}</button>
+          <button key={item.title} onClick={() => changeFilter(item.title)} className={`btn ${item.title === state.filter ? "active" : ""}`}>{item.title.charAt(0).toUpperCase() + item.title.slice(1)}</button>
         ))}
       </div>
       <div className='center'>
