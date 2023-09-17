@@ -1,4 +1,4 @@
-import Checkbox from '../../uiComponents/CheckBox/Checkbox'
+import Checkbox from '../../uiComponents/CheckBox/CheckBox'
 import './Item.scss'
 import { IItemProps } from "./Item.props"
 
