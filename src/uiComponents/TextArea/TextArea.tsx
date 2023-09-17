@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import ITextAreaProps from './TextAreaProps'
 
 const TextArea = ({ label, setState, state }: ITextAreaProps) => {

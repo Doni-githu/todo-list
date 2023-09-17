@@ -1,4 +1,4 @@
-import React, {
+import {
     useState,
     useContext
 } from 'react'
@@ -8,7 +8,7 @@ import { IContext, ITodo, TodoAction, TodoStates } from '../../interfaces/types'
 
 const AddTodo = () => {
     const [todo, setTodo] = useState<string>('')
-    const { state, dispatch } = useContext(context) as IContext<TodoStates, TodoAction>
+    const { dispatch } = useContext(context) as IContext<TodoStates, TodoAction>
     const addTodoHandler = () => {
         if (!todo) {
             return

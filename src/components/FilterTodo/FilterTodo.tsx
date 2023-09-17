@@ -1,6 +1,6 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import { context } from '../../context'
-import { FilterType, IContext, TodoAction, TodoStates } from '../../interfaces/types'
+import { IContext, TodoAction, TodoStates } from '../../interfaces/types'
 import './FilterTodo.scss'
 
 

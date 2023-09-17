@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import List from '../List/List'
 import FilterTodo from '../FilterTodo/FilterTodo'
 import AddTodo from '../AddTodo/AddTodo'
